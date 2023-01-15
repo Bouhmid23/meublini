@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Meublini</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+  <button ion-item icon-start *ngFor="let produit of produitList;let i=index" 
+  (click)="onLoadProduit(i)">
+  <strong>{{ produit.name }}</strong>
+  <ion-card>
+    <img src="{{produit.imgUrl}}">
+  </ion-card>
+  </button>
+  <ion-card>
+    <ion-card-header>Données</ion-card-header>
+    <ion-card-content>
+      <button ion-button block outline (click)="onSaveList()">Enregistrer</button>
+      <button ion-button block outline (click)="onFetchList()">Récupérer </button>
+    </ion-card-content>
+  </ion-card>
+  </ion-list>
+  </ion-content>

@@ -34,13 +34,28 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+primary: #0f2853,
+secondary: #4e65ce,
+danger: #f52424,
+light: #f4f4f4,
+dark: rgb(19, 1, 1),
+secondary-light: #eeffee,
+danger-light: #ffeeee
 );
+@font-face {
+  font-family: freehand;
+  src: url(https://fonts.googleapis.com/css2?family=Caveat&display=swap);
+}
+:root {
+  /* Set the background of the entire app */
+  --ion-background-color: #e6c4ba;
 
+  /* Set the font family of the entire app */
+  --ion-font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Roboto', sans-serif;
+}
+ion-button {
+  --color: #222;
+}
 
 // App iOS Variables
 // --------------------------------------------------
@@ -86,3 +101,4 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+

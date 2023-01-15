@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+  <ion-buttons>
+  <button ion-button clear (click)="dismissModal()">Fermer</button>
+  </ion-buttons>
+  <ion-title><strong>{{ produit.name }}</strong></ion-title>
+  </ion-navbar>
+  </ion-header>
+
+  <ion-content padding>
+    <ion-card>
+      <ion-card-header><strong>{{ produit.name }}</strong></ion-card-header>
+    <ion-card-content>
+      <p *ngFor="let line of produit.description">{{ line }}</p>
+      <div *ngIf="!produit.isBuyed; else elseBlock">En stock : Oui</div>
+      <ng-template #elseBlock>En stock : Non</ng-template>
+    </ion-card-content>
+    
+    <ion-card>
+      <img src="{{produit.imgUrl}}" >
+    </ion-card>
+
+    <ion-grid>
+    <ion-row>
+
+    </ion-row>
+    </ion-grid>
+    </ion-card>
+    </ion-content>
